@@ -26,11 +26,12 @@ async fn extract_zip(zip_file: &Path) -> Result<(), Box<dyn std::error::Error>> 
 
     for i in 0..archive.len() {
         let mut file = archive.by_index(i)?;
-        let file_path = file.mangled_name();
+        let file_path = file.name();
+        print!("Extracting {}...", file_path); // help
 
         let dest_path = file_path;
 
-        if let Some(parent_dir) = dest_path.parent() {
+        if let Some(parent_dir) = Path::new(dest_path).parent() {
             fs::create_dir_all(parent_dir)?;
         }
 
