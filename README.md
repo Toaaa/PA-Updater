@@ -1,5 +1,5 @@
 # PA-Updater
-Updater for Project-Apparatus, a Lethal Company cheat based on Infinite Company.
+Official Installer and Updater for Project-Apparatus, a Lethal Company cheat based on Infinite Company.
 
 ## How do i use it?
 1. Download the [latest release](https://github.com/Toaaa/PA-Updater/releases/latest)
