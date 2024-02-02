@@ -27,7 +27,7 @@ async fn extract_zip(zip_file: &Path) -> Result<(), Box<dyn std::error::Error>> 
     for i in 0..archive.len() {
         let mut file = archive.by_index(i)?;
         let file_path = file.name();
-        print!("Extracting {}...", file_path); // help
+        println!("Extracting {}...", file_path);
 
         let dest_path = file_path;
 
